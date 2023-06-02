@@ -15,7 +15,8 @@
   transition: all 1.5s ease;
 }
 .movie_card img:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
+    overflow: hidden;
 }
 .movie-info {
   background-color: rgb(128, 162, 162);
@@ -60,4 +61,12 @@
     background-color: rgb(128, 162, 162);
     color:rgb(255, 255, 255);
     opacity: 1;
+}
+.active{
+    color:rgb(0, 0, 0) !important;
+    background-color: beige !important;
+    border:1px solid black;
+}
+.bg-customize{
+    background-image: linear-gradient(to right, #ebe4e5, #878fb8);
 }
