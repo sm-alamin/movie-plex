@@ -75,7 +75,7 @@
 /* //Media Query */
 
  /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
   .movie-container {
     grid-template-columns: 1fr;
   }
@@ -137,4 +137,5 @@
     left: 12%;
   }
 }
+
 
