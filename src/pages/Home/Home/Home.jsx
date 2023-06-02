@@ -1,9 +1,10 @@
+import Movies from "../Movies/Movies";
 
 
 const Home = () => {
     return (
         <div>
-            <h3>Hello from movie plex</h3>
+            <Movies />
         </div>
     );
 };
