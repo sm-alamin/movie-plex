@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Movies.css";
 import Movie from "./Movie";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -11,12 +13,23 @@ const Movies = () => {
         setMovies(extractedMovies);
       });
   }, []);
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
-    <div className="movie-container">
-      {movies.map((movie) => (
-        <Movie key={movie.id} movie={movie} />
-      ))}
+    <div>
+      <div className="mb-3">
+        <h3 className="border-bottom"><span className="text-primary fs-1">Latest</span> Tv Shows</h3>
+      </div>
+      <div className="movie-container">
+      {movies.map((movie, index) => (
+          <div key={movie.id} data-aos="fade-up" data-aos-delay={index * 100}>
+            <Movie movie={movie} />
+          </div>
+        ))}
+
+    </div>
     </div>
   );
 };

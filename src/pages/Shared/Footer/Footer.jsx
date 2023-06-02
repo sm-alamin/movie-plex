@@ -1,14 +1,15 @@
-import React from 'react';
+
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
+    // Footer start
     <footer className="footer py-3 bg-customize pt-5 mt-5">
       <div className="container text-center">
         <div className="row">
           <div className="col-md-4">
             {/* Social Icons */}
-            <div className="social-icons">
+            <div className="social-icons d-flex justify-content-center justify-items-center gap-5 border rounded shadow py-3 mt-5">
               <a href="#"><FaFacebookF /></a>
               <a href="#"><FaTwitter /></a>
               <a href="#"><FaInstagram /></a>
@@ -34,7 +35,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer> 
+    // Footer End
   );
 };
 

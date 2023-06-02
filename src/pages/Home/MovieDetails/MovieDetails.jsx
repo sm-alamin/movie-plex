@@ -3,6 +3,7 @@ import "./MovieDetails.css";
 import { useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toast, { Toaster } from 'react-hot-toast';
+import Banner from "../../Banner/Banner";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -76,6 +77,7 @@ const MovieDetails = () => {
 
   return (
     <>
+     <Banner pageName="Movie Details" />
       <div className="movie_details_container">
         <div className="movie_details_left">
           <img src={movie.image?.original} alt={movie.name} />
@@ -83,11 +85,10 @@ const MovieDetails = () => {
         </div>
         <div className="movie_details_info">
           <h3>{movie.name}</h3>
-          <p>Average Run Time: {movie.runtime} minutes</p>
-          <p>Status: {movie.status}</p>
-          <p>{removeTags(movie.summary)}</p>
-        </div>
-        <div className="">
+          <p><span className="text-primary">Average Run Time:</span> {movie.runtime} minutes</p>
+          <p><span className="text-primary">Status:</span> {movie.status}</p>
+          <p><span className="text-primary">Summery:</span> <br />{removeTags(movie.summary)}</p>
+          <div className="">
           <button
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
@@ -97,6 +98,8 @@ const MovieDetails = () => {
             Buy Ticket Now
           </button>
         </div>
+        </div>
+        
       </div>
       <div className="modal-container">
         <div
