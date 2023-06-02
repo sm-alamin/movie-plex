@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Movie = ({movie}) => {
-    const { id, name, image, language, rating,genres } = movie;
+    const { id, name, image, language, rating, genres } = movie;
   return (
     <div className="movie_card">
       <img
@@ -17,7 +19,7 @@ const Movie = ({movie}) => {
           }
           </div>
         </div>
-        <button>Details</button>
+        <Link to={`/movie-details/${id}`}><button className="common_btn">Details</button></Link>
       </div>
     </div>
   );

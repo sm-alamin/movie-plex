@@ -16,22 +16,12 @@
   height: 300px;
 }
 .movie_details_left img {
-  width: 100%;
+  width: 350px;
   height: 100%;
 }
 .movie_details_info {
   color: white;
 }
-.movie_details_right button {
-  background-color: beige;
-  color: black;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.movie_details_right button:hover{
-    background-color: rgb(28, 28, 27);
-    color:rgb(241, 232, 232);
+.modal-container h2{
+    font-size: 100px;
 }
